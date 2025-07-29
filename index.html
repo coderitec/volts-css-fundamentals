@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css for starters</title>
+    <link rel="shortcut icon" href="./loops.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styling.css">
+</head>
+<body id="container">
+    <h1>fundamentals of css</h1>
+
+    <p>CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML. It allows you to control the layout, colors, fonts, and overall appearance of web pages.</p>
+
+    <section>
+        <h2>1. Inline CSS</h2>
+        <p>Inline CSS is used to apply a unique style to a single HTML element using the <code>style</code> attribute directly within the element.</p>
+        <img src="./loops.webp" alt="loops">
+        <ul>
+            <li>&lt;p style="color: red;"&gt;Red text&lt;/p&gt;</li>
+            <li>&lt;h1 style="font-size: 32px;"&gt;Large heading&lt;/h1&gt;</li>
+            <li>&lt;div style="background: yellow;"&gt;Yellow background&lt;/div&gt;</li>
+            <li>&lt;span style="font-weight: bold;"&gt;Bold text&lt;/span&gt;</li>
+            <li>&lt;a style="text-decoration: none;"&gt;No underline link&lt;/a&gt;</li>
+        </ul>
+    </section>
+    
+    <div>
+        <h2 class="gen">2. Internal CSS</h2>
+        <img src="./m1.png" alt="loops">
+        <p>Internal CSS is defined within the <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section of an HTML document and affects elements on that page.</p>
+        <ul>
+            <li>body { background-color: #f0f0f0; }</li>
+            <li class="gen old">h2 { color: blue; }</li>
+            <li>p { line-height: 1.5; }</li>
+            <li>ul { list-style-type: square; }</li>
+            <li>a { font-style: italic; }</li>
+        </ul>
+    </div>
+
+    <div>
+        <section>
+            <h2>3. External CSS</h2>
+            <p>External CSS is written <a href="https://univelcity.com/"> in a separate file</a> (e.g., <code>style.css</code>) and linked to the HTML document, allowing styles to be reused across multiple pages.</p>
+            <ul>
+                <li>Linking with &lt;link rel="stylesheet" href="style.css"&gt;</li>
+                <li>body { margin: 0; }</li>
+                <li class="gen">nav { background: #333; }</li>
+                <li>footer { text-align: center; }</li>
+                <li>img { max-width: 100%; }</li>
+            </ul>
+        </section>
+    </div>
+
+    <article>
+        <h2>CSS Frameworks</h2>
+        <p>CSS frameworks are pre-prepared libraries <a href="https://volts.univelcity.com/">that make web development</a>  faster and easier by providing ready-to-use styles and components.</p>
+        <ul>
+            <li>Bootstrap</li>
+            <li class="gen">Tailwind CSS</li>
+            <li>Bulma</li>
+            <li>Foundation</li>
+            <li>Materialize</li>
+        </ul>
+    </article>
+
+    <div>
+        <h2 class="gen">Summary</h2>
+        <p>CSS can be applied in various ways: inline, internal, external, and through frameworks. Each method has its own use cases and benefits, helping developers style web pages efficiently.</p>
+    </div>
+
+    <section>
+        <h2>get in touch with us</h2>
+
+        <form action="">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="enter your name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</body>
+</html>
