@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap');
+/* grid layout
+flex / flexbox
+inline-block 
+inline-flex */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+html{
+    --color: #f1c;
+    --bg-color: #dd7;
+    font-family: "Bitcount Prop Single", system-ui;;
+}
+
+section{
+    background-color: var(--color);
+}
+
+main{
+    background-color: var(--bg-color);
+    display:grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 150px);
+}
+
+section:first-of-type{
+    /* grid-area: rs/cs/re/ce; */
+    grid-area: 1/1/3/3;
+}
+
+section:nth-of-type(4){
+    /* grid-area: rs/cs/re/ce; */
+    grid-area: 1/3/6/4
+}
+
+section:nth-of-type(8){
+    /* grid-area: rs/cs/re/ce; */
+    grid-area: 5/1/6/3
+}
+
+section:nth-of-type(3){
+    /* grid-area: rs/cs/re/ce; */
+    /* grid-area: 6/1/7/4; */
+    grid-column: 1/4;
+    grid-row: 6/7;
+}
+
+section:nth-of-type(7){
+    /* grid-area: rs/cs/re/ce; */
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+section:nth-of-type(2){
+    /* grid-area: rs/cs/re/ce; */
+    grid-column-start: 1;
+    grid-row-start: 4;
+}

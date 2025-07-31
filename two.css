@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+html{
+    --color: #1cf;
+    --bg-color: #d7d;
+    font-family: "Bitcount Prop Single", system-ui;;
+}
+
+section{
+    background-color: var(--color);
+}
+
+main{
+    background-color: var(--bg-color);
+    display:grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 150px);
+    grid-template-areas: 
+    "a a h"
+    "a a h"
+    "b g h"
+    "c f h"
+    "d d h"
+    "e e e"
+}
+
+section:first-of-type{
+    grid-area: a;
+}
+
+section:nth-of-type(4){
+    grid-area: h;
+}
+
+section:nth-of-type(8){
+    grid-area: d;
+}
+
+section:nth-of-type(5){
+    grid-area: g;
+}
+section:nth-of-type(6){
+    grid-area: f;
+}
+
+section:nth-of-type(3){
+    grid-area: e;
+}
+
+section:nth-of-type(7){
+    grid-area: b;
+}
+
+section:nth-of-type(2){
+    grid-area: c;
+}
+
+nav ul{
+    height: 20vh;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+nav a{
+    text-decoration: none;
+}
+
+div{
+    height: 100vh;
+    border:20px dashed var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div > article{
+    height: 300px;
+    width: 300px;
+    background-color: var(--color);
+    border-radius: 50%;
+    /* border-start-start-radius: 40px;
+    border-end-start-radius: 40px;
+    border-end-end-radius: 40px; */
+}
