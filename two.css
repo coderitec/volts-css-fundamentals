@@ -8,11 +8,212 @@
 html{
     --color: #1cf;
     --bg-color: #d7d;
-    font-family: "Bitcount Prop Single", system-ui;;
+    --bd-color: #080;
+    --d-color: red;
+    font-family: "Bitcount Prop Single", system-ui;
 }
 
 section{
+    background-color: var(--d-color);
+}
+
+@media screen and (max-width: 640px){
+    
+    nav{
+        position: static;
+    /* left: 0;
+    right: 0; */
+}
+
+main{
+    background-color: var(--bg-color);
+    display:grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(9, 150px);
+    grid-template-areas: 
+    "a"
+    "a"
+    "b "
+    "h"
+    "d"
+    "c"
+    "f"
+    "e"
+    "g"
+}
+
+section:first-of-type{
+    grid-area: a;
+}
+
+section:nth-of-type(4){
+    grid-area: h;
+}
+
+section:nth-of-type(8){
+    grid-area: d;
+}
+
+section:nth-of-type(5){
+    grid-area: g;
+}
+section:nth-of-type(6){
+    grid-area: f;
+}
+
+section:nth-of-type(3){
+    grid-area: e;
+}
+
+section:nth-of-type(7){
+    grid-area: b;
+}
+
+section:nth-of-type(2){
+    grid-area: c;
+}
+
+nav ul{
+    height: 100vh;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bg-color);
+    opacity: 0.99;
+}
+
+nav a{
+    text-decoration: none;
+}
+div{
+    position: static;
+    /* z-index: -1; */
+}
+
+aside{
+    height: 100vh;
+    border:20px dashed var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+aside > article{
+    height: 300px;
+    width: 300px;
     background-color: var(--color);
+    border-radius: 50%;
+    /* border-start-start-radius: 40px;
+    border-end-start-radius: 40px;
+    border-end-end-radius: 40px; */
+}
+}
+
+@media screen and (min-width: 640px), (orientation: landscape){
+    
+    nav{
+        position: static;
+    /* left: 0;
+    right: 0; */
+}
+
+main{
+    background-color: var(--bd-color);
+    display:grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 150px);
+    grid-template-areas: 
+    "a a"
+    "a a"
+    "b h"
+    "c f"
+    "d g"
+    "e e"
+}
+
+section:first-of-type{
+    grid-area: a;
+}
+
+section:nth-of-type(4){
+    grid-area: h;
+}
+
+section:nth-of-type(8){
+    grid-area: d;
+}
+
+section:nth-of-type(5){
+    grid-area: g;
+}
+section:nth-of-type(6){
+    grid-area: f;
+}
+
+section:nth-of-type(3){
+    grid-area: e;
+}
+
+section:nth-of-type(7){
+    grid-area: b;
+}
+
+section:nth-of-type(2){
+    grid-area: c;
+}
+
+nav ul{
+    height: 100vh;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--d-color);
+    opacity: 0.99;
+}
+
+nav a{
+    text-decoration: none;
+}
+div{
+    position: static;
+    /* z-index: -1; */
+}
+
+aside{
+    height: 100vh;
+    border:20px dashed var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+aside > article{
+    height: 300px;
+    width: 300px;
+    background-color: var(--color);
+    border-radius: 50%;
+    /* border-start-start-radius: 40px;
+    border-end-start-radius: 40px;
+    border-end-end-radius: 40px; */
+}
+}
+
+@media screen and (min-width: 840px){
+    
+    nav{
+        position: fixed;
+        inset-inline: 0;
+        z-index: 1;
+    /* left: 0;
+    right: 0; */
 }
 
 main{
@@ -69,13 +270,19 @@ nav ul{
     justify-content: space-around;
     align-items: center;
     background-color: var(--bg-color);
+    opacity: 0.99;
 }
 
 nav a{
     text-decoration: none;
 }
-
 div{
+    position: relative;
+    top: 20vh;
+    /* z-index: -1; */
+}
+
+aside{
     height: 100vh;
     border:20px dashed var(--bg-color);
     display: flex;
@@ -84,7 +291,7 @@ div{
     align-items: center;
 }
 
-div > article{
+aside > article{
     height: 300px;
     width: 300px;
     background-color: var(--color);
@@ -92,4 +299,16 @@ div > article{
     /* border-start-start-radius: 40px;
     border-end-start-radius: 40px;
     border-end-end-radius: 40px; */
+}
+}
+
+
+@media print{
+    h2::before{
+        content: 'Chapter ';
+    }
+
+    nav{
+        display: none;
+    }
 }
