@@ -1,0 +1,26 @@
+{
+  "name": "css-fundamentals",
+  "version": "1.0.0",
+  "description": "Fundamentals of TailwindCSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "victor": "npx @tailwindcss/cli -i ./ayo.css -o ./mide.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderitec/volts-css-fundamentals.git"
+  },
+  "keywords": [
+    "tailwindcss",
+    "css",
+    "html",
+    "js"
+  ],
+  "author": "Franc Enemuo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderitec/volts-css-fundamentals/issues"
+  },
+  "homepage": "https://github.com/coderitec/volts-css-fundamentals#readme"
+}
