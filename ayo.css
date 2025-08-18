@@ -77,3 +77,9 @@
         clip-path: polygon(10% 25%, 10% 0, 35% 0%, 65% 0%, 90% 0, 90% 25%, 90% 50%, 88% 50%, 89% 100%, 54% 100%, 54% 48%, 10% 49%);
     }
 }
+
+@layer components {
+    .btn {
+        @apply w-full h-16 text-3xl hover:border-slate-950 rounded-lg cursor-pointer hover:border-4
+    }
+}
